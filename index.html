@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Para Lady ❤️</title>
 
-<!-- Tipografías elegantes -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
@@ -17,12 +16,13 @@ body {
     overflow-x: hidden;
 }
 
-/* Notas musicales */
+/* Notas musicales visibles */
 .note {
-    position: absolute;
-    font-size: 22px;
-    opacity: 0.08;
+    position: fixed;
+    font-size: 28px;
+    opacity: 0.15;
     animation: float 12s infinite linear;
+    z-index: 0;
 }
 
 @keyframes float {
@@ -32,15 +32,17 @@ body {
 
 /* Tarjeta */
 .container {
-    max-width: 650px;
-    margin: 80px auto;
-    background: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(12px);
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    margin: 40px auto;
+    background: rgba(20, 20, 20, 0.85);
+    backdrop-filter: blur(10px);
     border-radius: 20px;
-    padding: 45px 30px;
-    box-shadow: 0 0 40px rgba(0,0,0,0.6);
+    padding: 35px 20px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.7);
     text-align: center;
-    border: 1px solid rgba(240, 198, 116, 0.1);
+    border: 1px solid rgba(240, 198, 116, 0.15);
 }
 
 /* Título */
@@ -48,59 +50,71 @@ h1 {
     font-family: 'Playfair Display', serif;
     color: #f0c674;
     font-weight: 500;
-    letter-spacing: 1px;
 }
 
-/* Línea decorativa */
+/* Línea */
 .divider {
-    width: 60px;
+    width: 50px;
     height: 2px;
     background: #f0c674;
-    margin: 20px auto;
-    opacity: 0.6;
+    margin: 15px auto;
 }
 
-/* Texto */
+/* Texto más vivo */
 p {
-    font-family: 'Poppins', sans-serif;
     font-size: 17px;
-    line-height: 1.8;
-    color: #ddd;
+    line-height: 1.9;
+    color: #eaeaea;
+}
+
+/* Resaltar líneas */
+.highlight {
+    color: #f0c674;
+    font-weight: 400;
 }
 
 /* Audio */
 audio {
-    margin-top: 30px;
+    margin-top: 25px;
     width: 100%;
 }
 
 /* Botones */
 .buttons {
-    margin-top: 25px;
+    margin-top: 20px;
 }
 
 button {
-    padding: 12px 22px;
-    margin: 8px;
+    padding: 10px 18px;
+    margin: 6px;
     border-radius: 10px;
     border: 1px solid rgba(240, 198, 116, 0.4);
     background: transparent;
     color: #f0c674;
-    font-size: 15px;
     cursor: pointer;
-    transition: all 0.3s ease;
 }
 
 button:hover {
     background: rgba(240, 198, 116, 0.1);
-    transform: scale(1.05);
 }
 
 /* Footer */
 footer {
-    margin-top: 35px;
+    margin-top: 25px;
     font-size: 13px;
     opacity: 0.6;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .container {
+        margin: 20px;
+        padding: 25px 15px;
+    }
+
+    p {
+        font-size: 16px;
+    }
 }
 </style>
 </head>
@@ -108,38 +122,39 @@ footer {
 <body>
 
 <!-- Notas musicales -->
-<div class="note" style="left:15%;">🎵</div>
-<div class="note" style="left:40%; animation-duration:14s;">🎶</div>
-<div class="note" style="left:65%; animation-duration:10s;">🎵</div>
-<div class="note" style="left:85%; animation-duration:16s;">🎶</div>
+<div class="note" style="left:10%;">🎵</div>
+<div class="note" style="left:25%; animation-duration:10s;">🎶</div>
+<div class="note" style="left:50%; animation-duration:14s;">🎵</div>
+<div class="note" style="left:75%; animation-duration:9s;">🎶</div>
+<div class="note" style="left:90%; animation-duration:13s;">🎵</div>
 
 <div class="container">
-    <h1>Para Lady</h1>
-
+    <h1>Lady ❤️</h1>
     <div class="divider"></div>
 
     <p>
-        Lady,<br><br>
+        Amor 💛,<br><br>
 
         No quería darte algo común…  
-        quería darte algo que se sintiera.
+        quería darte algo que <span class="highlight">realmente se sintiera</span>.
 
         <br><br>
 
-        Esta canción no explica todo lo que significas para mí,  
-        pero sí guarda una parte muy real de lo que siento.
+        🎶 Esta canción no dice todo,  
+        pero guarda una parte muy real de lo que siento por ti.
 
         <br><br>
 
-        Me gusta lo que somos,  
-        lo que hemos construido  
+        Me gusta lo que somos 💫,  
+        lo que hemos construido juntos,  
         y todo lo que todavía nos falta por vivir.
 
         <br><br>
 
-        Solo quería que tuvieras esto,  
+        💭 Solo quería que tuvieras esto…  
         para que lo escuches cuando quieras  
         y recuerdes que es para ti.
+
     </p>
 
     <audio controls autoplay>
@@ -147,8 +162,8 @@ footer {
     </audio>
 
     <div class="buttons">
-        <button onclick="descargar('audio.mp3')">Descargar Audio</button>
-        <button onclick="descargarTexto()">Descargar Mensaje</button>
+        <button onclick="descargar('audio.mp3')">⬇️ Audio</button>
+        <button onclick="descargarTexto()">💌 Mensaje</button>
     </div>
 
     <footer>
@@ -165,15 +180,15 @@ function descargar(archivo) {
 }
 
 function descargarTexto() {
-    const texto = `Lady,
+    const texto = `Amor,
 
-No quería darte algo común… quería darte algo que se sintiera.
+No quería darte algo común… quería darte algo que realmente se sintiera.
 
-Esta canción no explica todo lo que significas para mí, pero sí guarda una parte muy real de lo que siento.
+Esta canción guarda una parte muy real de lo que siento por ti.
 
-Me gusta lo que somos, lo que hemos construido y todo lo que todavía nos falta por vivir.
+Me gusta lo que somos, lo que hemos construido y lo que aún nos falta por vivir.
 
-Solo quería que tuvieras esto, para que lo escuches cuando quieras y recuerdes que es para ti.
+Esto es para ti.
 
 Marisol 💙`;
 
