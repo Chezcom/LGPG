@@ -5,16 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Para Lady ❤️</title>
 
+<!-- Tipografías elegantes -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
 <style>
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, #0a0a0a, #141414, #1f1f1f);
     color: #f5f5f5;
     overflow-x: hidden;
 }
 
-/* Notas musicales elegantes */
+/* Notas musicales */
 .note {
     position: absolute;
     font-size: 22px;
@@ -27,7 +30,7 @@ body {
     100% { transform: translateY(-10vh); }
 }
 
-/* Tarjeta principal */
+/* Tarjeta */
 .container {
     max-width: 650px;
     margin: 80px auto;
@@ -37,20 +40,31 @@ body {
     padding: 45px 30px;
     box-shadow: 0 0 40px rgba(0,0,0,0.6);
     text-align: center;
-    border: 1px solid rgba(255, 215, 160, 0.1);
+    border: 1px solid rgba(240, 198, 116, 0.1);
 }
 
 /* Título */
 h1 {
+    font-family: 'Playfair Display', serif;
     color: #f0c674;
     font-weight: 500;
     letter-spacing: 1px;
 }
 
+/* Línea decorativa */
+.divider {
+    width: 60px;
+    height: 2px;
+    background: #f0c674;
+    margin: 20px auto;
+    opacity: 0.6;
+}
+
 /* Texto */
 p {
+    font-family: 'Poppins', sans-serif;
     font-size: 17px;
-    line-height: 1.7;
+    line-height: 1.8;
     color: #ddd;
 }
 
@@ -82,15 +96,6 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* Línea decorativa */
-.divider {
-    width: 60px;
-    height: 2px;
-    background: #f0c674;
-    margin: 20px auto;
-    opacity: 0.6;
-}
-
 /* Footer */
 footer {
     margin-top: 35px;
@@ -102,7 +107,7 @@ footer {
 
 <body>
 
-<!-- Notas -->
+<!-- Notas musicales -->
 <div class="note" style="left:15%;">🎵</div>
 <div class="note" style="left:40%; animation-duration:14s;">🎶</div>
 <div class="note" style="left:65%; animation-duration:10s;">🎵</div>
@@ -115,12 +120,26 @@ footer {
 
     <p>
         Lady,<br><br>
-        Quise hacer algo diferente para ti, algo que pudieras escuchar y guardar.
-        Esta canción es solo una pequeña muestra de lo importante que eres para mí.
+
+        No quería darte algo común…  
+        quería darte algo que se sintiera.
+
         <br><br>
-        Gracias por estar, por compartir conmigo y por todo lo que construimos día a día.
+
+        Esta canción no explica todo lo que significas para mí,  
+        pero sí guarda una parte muy real de lo que siento.
+
         <br><br>
-        Esto es para ti… con todo mi amor.
+
+        Me gusta lo que somos,  
+        lo que hemos construido  
+        y todo lo que todavía nos falta por vivir.
+
+        <br><br>
+
+        Solo quería que tuvieras esto,  
+        para que lo escuches cuando quieras  
+        y recuerdes que es para ti.
     </p>
 
     <audio controls autoplay>
@@ -148,13 +167,13 @@ function descargar(archivo) {
 function descargarTexto() {
     const texto = `Lady,
 
-Quise hacer algo diferente para ti, algo que pudieras escuchar y guardar.
+No quería darte algo común… quería darte algo que se sintiera.
 
-Esta canción es solo una pequeña muestra de lo importante que eres para mí.
+Esta canción no explica todo lo que significas para mí, pero sí guarda una parte muy real de lo que siento.
 
-Gracias por estar, por compartir conmigo y por todo lo que construimos día a día.
+Me gusta lo que somos, lo que hemos construido y todo lo que todavía nos falta por vivir.
 
-Esto es para ti… con todo mi cariño.
+Solo quería que tuvieras esto, para que lo escuches cuando quieras y recuerdes que es para ti.
 
 Marisol 💙`;
 
