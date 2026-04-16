@@ -9,62 +9,109 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(180deg, #0f0f0f, #1c1c1c);
-    color: white;
-    text-align: center;
+    background: linear-gradient(135deg, #0a0a0a, #141414, #1f1f1f);
+    color: #f5f5f5;
+    overflow-x: hidden;
 }
 
+/* Notas musicales elegantes */
+.note {
+    position: absolute;
+    font-size: 22px;
+    opacity: 0.08;
+    animation: float 12s infinite linear;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh); }
+    100% { transform: translateY(-10vh); }
+}
+
+/* Tarjeta principal */
 .container {
-    padding: 40px 20px;
+    max-width: 650px;
+    margin: 80px auto;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 45px 30px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.6);
+    text-align: center;
+    border: 1px solid rgba(255, 215, 160, 0.1);
 }
 
+/* Título */
 h1 {
-    color: #ff4d6d;
+    color: #f0c674;
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 
+/* Texto */
 p {
-    font-size: 18px;
-    line-height: 1.6;
-    max-width: 600px;
-    margin: auto;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #ddd;
 }
 
+/* Audio */
 audio {
     margin-top: 30px;
-    width: 80%;
+    width: 100%;
 }
 
+/* Botones */
 .buttons {
     margin-top: 25px;
 }
 
 button {
-    padding: 12px 20px;
-    margin: 10px;
-    border: none;
-    border-radius: 8px;
-    background: #ff4d6d;
-    color: white;
-    font-size: 16px;
+    padding: 12px 22px;
+    margin: 8px;
+    border-radius: 10px;
+    border: 1px solid rgba(240, 198, 116, 0.4);
+    background: transparent;
+    color: #f0c674;
+    font-size: 15px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 button:hover {
-    background: #e04360;
+    background: rgba(240, 198, 116, 0.1);
+    transform: scale(1.05);
 }
 
+/* Línea decorativa */
+.divider {
+    width: 60px;
+    height: 2px;
+    background: #f0c674;
+    margin: 20px auto;
+    opacity: 0.6;
+}
+
+/* Footer */
 footer {
-    margin-top: 40px;
-    font-size: 14px;
-    opacity: 0.7;
+    margin-top: 35px;
+    font-size: 13px;
+    opacity: 0.6;
 }
 </style>
 </head>
 
 <body>
 
+<!-- Notas -->
+<div class="note" style="left:15%;">🎵</div>
+<div class="note" style="left:40%; animation-duration:14s;">🎶</div>
+<div class="note" style="left:65%; animation-duration:10s;">🎵</div>
+<div class="note" style="left:85%; animation-duration:16s;">🎶</div>
+
 <div class="container">
-    <h1>Para Lady ❤️</h1>
+    <h1>Para Lady</h1>
+
+    <div class="divider"></div>
 
     <p>
         Lady,<br><br>
@@ -73,7 +120,7 @@ footer {
         <br><br>
         Gracias por estar, por compartir conmigo y por todo lo que construimos día a día.
         <br><br>
-        Esto es para ti… con todo mi cariño.
+        Esto es para ti… con todo mi amor.
     </p>
 
     <audio controls autoplay>
@@ -86,7 +133,7 @@ footer {
     </div>
 
     <footer>
-        Hecho por Marisol 💙
+        Marisol 💙
     </footer>
 </div>
 
