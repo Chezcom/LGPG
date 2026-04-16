@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Lady ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(180deg, #0f0f0f, #1c1c1c);
+    color: white;
+    text-align: center;
+}
+
+video {
+    width: 100%;
+    max-height: 90vh;
+    object-fit: cover;
+}
+
+.container {
+    padding: 30px 20px;
+}
+
+h1 {
+    color: #ff4d6d;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: auto;
+}
+
+.buttons {
+    margin-top: 25px;
+}
+
+button {
+    padding: 12px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #ff4d6d;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #e04360;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+</style>
+</head>
+
+<body>
+
+<video controls autoplay>
+    <source src="video.mp4" type="video/mp4">
+</video>
+
+<div class="container">
+    <h1>Para Lady ❤️</h1>
+
+    <p>
+        Lady,<br><br>
+        Quise hacer algo diferente para ti, algo que pudieras ver, escuchar y guardar.
+        Esta canción y este video son solo una pequeña muestra de lo importante que eres para mí.
+        <br><br>
+        Gracias por estar, por compartir conmigo y por todo lo que construimos día a día.
+        <br><br>
+        Esto es para ti… con todo mi cariño.
+    </p>
+
+    <div class="buttons">
+        <button onclick="descargar('video.mp4')">Descargar Video</button>
+        <button onclick="descargar('audio.mp3')">Descargar Audio</button>
+        <button onclick="descargarTexto()">Descargar Mensaje</button>
+    </div>
+
+    <footer>
+        Hecho por Marisol 💙
+    </footer>
+</div>
+
+<script>
+function descargar(archivo) {
+    const link = document.createElement('a');
+    link.href = archivo;
+    link.download = archivo;
+    link.click();
+}
+
+function descargarTexto() {
+    const texto = `Lady,
+
+Quise hacer algo diferente para ti, algo que pudieras ver, escuchar y guardar.
+
+Esta canción y este video son solo una pequeña muestra de lo importante que eres para mí.
+
+Gracias por estar, por compartir conmigo y por todo lo que construimos día a día.
+
+Esto es para ti… con todo mi cariño.
+
+Marisol 💙`;
+
+    const blob = new Blob([texto], { type: 'text/plain' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = "mensaje.txt";
+    link.click();
+}
+</script>
+
+</body>
+</html>
