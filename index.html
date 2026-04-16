@@ -14,14 +14,8 @@ body {
     text-align: center;
 }
 
-video {
-    width: 100%;
-    max-height: 90vh;
-    object-fit: cover;
-}
-
 .container {
-    padding: 30px 20px;
+    padding: 40px 20px;
 }
 
 h1 {
@@ -33,6 +27,11 @@ p {
     line-height: 1.6;
     max-width: 600px;
     margin: auto;
+}
+
+audio {
+    margin-top: 30px;
+    width: 80%;
 }
 
 .buttons {
@@ -64,25 +63,24 @@ footer {
 
 <body>
 
-<video controls autoplay>
-    <source src="video.mp4" type="video/mp4">
-</video>
-
 <div class="container">
     <h1>Para Lady ❤️</h1>
 
     <p>
         Lady,<br><br>
-        Quise hacer algo diferente para ti, algo que pudieras ver, escuchar y guardar.
-        Esta canción y este video son solo una pequeña muestra de lo importante que eres para mí.
+        Quise hacer algo diferente para ti, algo que pudieras escuchar y guardar.
+        Esta canción es solo una pequeña muestra de lo importante que eres para mí.
         <br><br>
         Gracias por estar, por compartir conmigo y por todo lo que construimos día a día.
         <br><br>
         Esto es para ti… con todo mi cariño.
     </p>
 
+    <audio controls autoplay>
+        <source src="audio.mp3" type="audio/mpeg">
+    </audio>
+
     <div class="buttons">
-        <button onclick="descargar('video.mp4')">Descargar Video</button>
         <button onclick="descargar('audio.mp3')">Descargar Audio</button>
         <button onclick="descargarTexto()">Descargar Mensaje</button>
     </div>
@@ -103,9 +101,9 @@ function descargar(archivo) {
 function descargarTexto() {
     const texto = `Lady,
 
-Quise hacer algo diferente para ti, algo que pudieras ver, escuchar y guardar.
+Quise hacer algo diferente para ti, algo que pudieras escuchar y guardar.
 
-Esta canción y este video son solo una pequeña muestra de lo importante que eres para mí.
+Esta canción es solo una pequeña muestra de lo importante que eres para mí.
 
 Gracias por estar, por compartir conmigo y por todo lo que construimos día a día.
 
